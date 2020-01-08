@@ -29,6 +29,9 @@ public class Bookmark {
 
     @Override
     protected void finalize() throws Throwable {
+        nDestroyBookmark(mNativeObject);
         super.finalize();
     }
+
+    private static native void nDestroyBookmark(long nativeObject);
 }

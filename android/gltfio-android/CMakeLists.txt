@@ -13,6 +13,10 @@ add_library(backend STATIC IMPORTED)
 set_target_properties(backend PROPERTIES IMPORTED_LOCATION
         ${FILAMENT_DIR}/lib/${ANDROID_ABI}/libbackend.a)
 
+add_library(camutils STATIC IMPORTED)
+set_target_properties(camutils PROPERTIES IMPORTED_LOCATION
+        ${FILAMENT_DIR}/lib/${ANDROID_ABI}/libcamutils.a)
+
 add_library(utils STATIC IMPORTED)
 set_target_properties(utils PROPERTIES IMPORTED_LOCATION
         ${FILAMENT_DIR}/lib/${ANDROID_ABI}/libutils.a)
@@ -85,6 +89,7 @@ target_link_libraries(gltfio-jni
         backend
         filaflat
         filabridge
+        camutils
         geometry
         image
         ibl
