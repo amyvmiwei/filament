@@ -62,8 +62,10 @@ set(CMAKE_SHARED_LINKER_FLAGS_RELEASE "${CMAKE_SHARED_LINKER_FLAGS_RELEASE} -Wl,
 add_library(gltfio-jni SHARED
         src/main/cpp/Animator.cpp
         src/main/cpp/AssetLoader.cpp
+        src/main/cpp/Bookmark.cpp
         src/main/cpp/FilamentAsset.cpp
         src/main/cpp/KtxLoader.cpp
+        src/main/cpp/Manipulator.cpp
         src/main/cpp/MaterialProvider.cpp
         src/main/cpp/ResourceLoader.cpp
 
